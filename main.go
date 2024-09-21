@@ -1,25 +1,47 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
-//TIP To run your code, right-click the code and select <b>Run</b>. Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.
-
 func main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined or highlighted text
-  // to see how GoLand suggests fixing it.
-  s := "gopher"
-  fmt.Println("Hello and welcome, %s!", s)
 
-  for i := 1; i <= 5; i++ {
-	//TIP You can try debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-	// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>. To start your debugging session, 
-	// right-click your code in the editor and select the <b>Debug</b> option. 
-	fmt.Println("i =", 100/i)
-  }
+	// int int8 = -255, 255; int16 = -65535, 65535;
+	// int32 = -4,294,967,295, 4,294,967,295; int64 =   -18,446,744,073,709,551,615,
+	//                                                  18,446,744,073,709,551,615;
+	// uint (unsigned int) tem a mesma notação (uint uint8, uint16, uint32, uint64), mas
+	// trata de números inteiros módulo (sem sinal).
+
+	// o tipo "byte" é um alias pra uint8 (unsigned), e o tipo "rune" é um int32 (signed).
+
+	// float32 e float34 são os equivalentes para pontos flutuantes;
+
+	// complex32 e complex64 tratam de números imaginários para usos específicos da matemática discreta.
+
+	var numeroBananas uint8
+	var numeroCidadesBrasileiras uint16
+	var numeroCidadesNoMundo uint32
+	var numeroEstrelasNoCeu uint64
+
+	numeroBananas = 10
+	numeroCidadesBrasileiras = 5565
+	numeroCidadesNoMundo = 2500000
+	numeroEstrelasNoCeu = 400000000000
+
+	fmt.Println("possuo ", numeroBananas, " em meu bolso.\n",
+		"tem", numeroCidadesBrasileiras, "cidades no brasil.\n",
+		"já no mundo, existem", numeroCidadesNoMundo, "cidades.\n",
+		"e estima-se que tenham sido descobertas aproximadamente", numeroEstrelasNoCeu, "estrelas na galáxia.")
+
+	fmt.Println("\n")
+
+	fmt.Println("os valores estão armazenados em ", &numeroBananas, &numeroCidadesBrasileiras,
+		&numeroCidadesNoMundo, &numeroEstrelasNoCeu, "respectivamente.")
+
+	fmt.Println("\n")
+
+	fmt.Printf("o número de bananas está representado por uma variável %T,\n"+
+		"o número de cidades brasileiras em %T,\n"+"o número de cidades do mundo está em %T,\n"+
+		"e o número de estrelas no céu está em %T.",
+		numeroBananas, numeroCidadesBrasileiras, numeroCidadesNoMundo, numeroEstrelasNoCeu)
 }
-
-//TIP See GoLand help at <a href="https://www.jetbrains.com/help/go/">jetbrains.com/help/go/</a>.
-// Also, you can try interactive lessons for GoLand by selecting 'Help | Learn IDE Features' from the main menu.
