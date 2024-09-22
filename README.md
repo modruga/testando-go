@@ -1,2 +1,2 @@
-## desenvolvendo uma API em go
-# entendendo e desenvolvimento os conceitos de API na linguagem GO usando pgsql
+# desenevolvimento de API em GO
+## traduzindo conhecimentos adquiridos em Spring para implementação de API Go em conjunto com PGSQL.
