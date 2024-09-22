@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
 
 	// int int8 = -255, 255; int16 = -65535, 65535;
@@ -18,30 +14,56 @@ func main() {
 
 	// complex32 e complex64 tratam de números imaginários para usos específicos da matemática discreta.
 
-	var numeroBananas uint8
-	var numeroCidadesBrasileiras uint16
-	var numeroCidadesNoMundo uint32
-	var numeroEstrelasNoCeu uint64
+	// string é uma sequência de bytes, e é imutável.
 
-	numeroBananas = 10
-	numeroCidadesBrasileiras = 5565
-	numeroCidadesNoMundo = 2500000
-	numeroEstrelasNoCeu = 400000000000
+	// slice: pega um pedaço da array ([:3] pega do 0 ao 3, [2:] pega tudo depois do 2)
 
-	fmt.Println("possuo ", numeroBananas, " em meu bolso.\n",
-		"tem", numeroCidadesBrasileiras, "cidades no brasil.\n",
-		"já no mundo, existem", numeroCidadesNoMundo, "cidades.\n",
-		"e estima-se que tenham sido descobertas aproximadamente", numeroEstrelasNoCeu, "estrelas na galáxia.")
+	/*
+		var numeroBananas uint8
+		var numeroCidadesBrasileiras uint16
+		var numeroCidadesNoMundo uint32
+		var numeroEstrelasNoCeu uint64
 
-	fmt.Println("\n")
+		numeroBananas = 10
+		numeroCidadesBrasileiras = 5565
+		numeroCidadesNoMundo = 2500000
+		numeroEstrelasNoCeu = 400000000000
 
-	fmt.Println("os valores estão armazenados em ", &numeroBananas, &numeroCidadesBrasileiras,
-		&numeroCidadesNoMundo, &numeroEstrelasNoCeu, "respectivamente.")
+		fmt.Println("possuo ", numeroBananas, " em meu bolso.\n",
+			"tem", numeroCidadesBrasileiras, "cidades no brasil.\n",
+			"já no mundo, existem", numeroCidadesNoMundo, "cidades.\n",
+			"e estima-se que tenham sido descobertas aproximadamente", numeroEstrelasNoCeu, "estrelas na galáxia.")
 
-	fmt.Println("\n")
+		fmt.Println("\n")
 
-	fmt.Printf("o número de bananas está representado por uma variável %T,\n"+
-		"o número de cidades brasileiras em %T,\n"+"o número de cidades do mundo está em %T,\n"+
-		"e o número de estrelas no céu está em %T.",
-		numeroBananas, numeroCidadesBrasileiras, numeroCidadesNoMundo, numeroEstrelasNoCeu)
+		fmt.Println("os valores estão armazenados em ", &numeroBananas, &numeroCidadesBrasileiras,
+			&numeroCidadesNoMundo, &numeroEstrelasNoCeu, "respectivamente.")
+
+		fmt.Println("\n")
+
+		fmt.Printf("o número de bananas está representado por uma variável %T,\n"+
+			"o número de cidades brasileiras em %T,\n"+"o número de cidades do mundo está em %T,\n"+
+			"e o número de estrelas no céu está em %T.",
+			numeroBananas, numeroCidadesBrasileiras, numeroCidadesNoMundo, numeroEstrelasNoCeu)
+
+		var exemploArray = [6]uint16{1, 2, 3, 4, 5, 6}
+		var stringStudents = [2]string{"madruga", "cassian"}
+
+		fmt.Printf("\n%v %v %v, %v\n", exemploArray, stringStudents, len(exemploArray), len(stringStudents))
+
+		var bidimensional = [3][3]uint16{}
+		bidimensional[1] = [3]uint16{1, 2, 3}
+		bidimensional[0] = [3]uint16{3, 4, 5}
+		bidimensional[2] = [3]uint16{7, 8, 9}
+
+		fmt.Printf("os valores na array bidimensional são %V\n", bidimensional)
+		fmt.Printf("e ela está no endereço %p", &bidimensional)
+
+		// slice: pega um pedaço da array ([:3] pega do 0 ao 3, [2:] pega tudo depois do 2)
+
+		bidimensionalCortada := bidimensional[:2]
+
+		fmt.Printf("%V", bidimensionalCortada)
+	*/
+
 }
