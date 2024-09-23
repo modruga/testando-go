@@ -7,7 +7,7 @@ import "github.com/spf13/viper"
 // cfg é um ponteiro para a configuração do sistema
 var cfg *config
 
-// config armazena a configuração do sistema
+// config armazena e organiza as configurações do sistema
 type config struct {
 	API APIConfig
 	DB  DBConfig
